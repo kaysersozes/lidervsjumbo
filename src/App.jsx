@@ -17,7 +17,11 @@ function App() {
     const fetchProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:3001/api/products');
+        // Use relative URL in production, absolute in development
+        const apiUrl = import.meta.env.PROD
+          ? '/api/products'
+          : 'http://localhost:3001/api/products';
+        const response = await axios.get(apiUrl);
 
         if (response.data.success) {
           setProducts(response.data.data);

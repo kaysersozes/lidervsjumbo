@@ -246,6 +246,23 @@ Si el puerto 3001 o 5173 están ocupados, puedes cambiarlos:
 ### Problemas de CORS
 El backend ya tiene CORS habilitado. Si experimentas problemas, verifica que las URLs coincidan.
 
+## Despliegue en Producción
+
+La aplicación está lista para ser desplegada en producción. Consulta [DEPLOYMENT.md](DEPLOYMENT.md) para instrucciones detalladas.
+
+### Despliegue rápido en Render (Gratis):
+
+1. Crea una cuenta en [render.com](https://render.com)
+2. Conecta tu repositorio de GitHub
+3. Configura:
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `npm start`
+4. Deploy
+
+Tu aplicación estará en vivo en minutos en una URL como: `https://tu-app.onrender.com`
+
+Ver [DEPLOYMENT.md](DEPLOYMENT.md) para más opciones (Railway, Vercel, Docker, VPS).
+
 ## Mejoras Futuras
 
 - [ ] Implementar scraping real con Puppeteer
