@@ -2,6 +2,12 @@
 
 Aplicación web interactiva desarrollada en React para visualizar y comparar precios de productos entre los supermercados Lider.cl y Jumbo.cl en Chile.
 
+## 📖 Guías Disponibles
+
+- **[QUICKSTART.md](QUICKSTART.md)** - Ejecuta la app en 5 minutos
+- **[TUTORIAL.md](TUTORIAL.md)** - Guía completa de aprendizaje paso a paso
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Cómo desplegar en producción
+
 ## Características
 
 - **Comparación de Precios**: Visualiza precios de productos de Lider y Jumbo lado a lado

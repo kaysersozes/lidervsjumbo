@@ -49,8 +49,13 @@ app.use(express.static(distPath));
 
 // The "catchall" handler: for any request that doesn't
 // match an API route, send back the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
+app.use((req, res) => {
+  // Only serve index.html for non-API routes
+  if (!req.path.startsWith('/api')) {
+    res.sendFile(path.join(distPath, 'index.html'));
+  } else {
+    res.status(404).json({ error: 'API endpoint not found' });
+  }
 });
 
 // Helper function to merge products from both stores
